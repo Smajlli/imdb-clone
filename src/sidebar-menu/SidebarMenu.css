@@ -1,0 +1,53 @@
+.sidebarMenu {
+    background-color: rgb(43, 43, 43);
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebarMenu * {
+    background-color: transparent;
+}
+
+.sidebarMenuContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebarMenuCategory {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebarCategoryIcon {
+    color: white;
+}
+
+.sidebarCategoryHeading {
+    color: white;
+}
+
+.sidebarMenuClose {
+    margin-bottom: 40px;
+}
+
+.sidebarCloseButton {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebarMenuCategoryWrapper {
+    display: flex; 
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebarMenuCategoryArrow {
+    color: white;
+}

@@ -1,0 +1,20 @@
+.sidebarMenuCelebsContainer {
+    background-color: transparent;
+    height: 120px;
+    width: 320px;
+    display: block;
+    border-bottom: 1px solid rgb(78, 78, 78);
+    margin-bottom: 20px;
+}
+
+.sidebarMenuListItems {
+    background-color: transparent;
+}
+
+.sidebarMenuListItems li {
+    background-color: transparent;
+    color: white;
+    list-style: none;
+    margin-bottom: 22px;
+    font-weight: bold;
+}
