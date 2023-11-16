@@ -1,0 +1,9 @@
+* {
+    margin: 0px;
+    font-family: 'Anton', sans-serif;
+    background-color: black;
+}
+
+svg {
+    background-color: transparent;
+}
