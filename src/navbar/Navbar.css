@@ -1,0 +1,221 @@
+.navbarWrapper {
+    width: 100%;
+}
+
+.Navbar {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.Logo {
+    background-color: rgb(245, 197, 24);
+    height: 32px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 23px;
+    @media(max-width: 925px) {
+        order: 2;
+    }
+}
+
+.Menu {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Hamburger-wrapper {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hamburger {
+    background-color: white;
+    height: 2px;
+    width: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    @media(max-width: 925px) {
+        order: 1;
+    }
+}
+
+.Menu-text {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    @media(max-width: 925px) {
+        display: none;
+    }
+}
+
+.Search {
+    width: 600px;
+    height: 28px;
+    border: none;
+    background-color: white;
+    @media(max-width: 1225px) {
+        width: 300px;
+    }
+    @media(max-width: 768px) {
+        width: 180px;
+    }
+    @media(max-width: 610px) {
+        display: none;
+    }
+}
+
+.Right-navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Right-navbar label {
+    color: white;
+}
+
+.Sign-in {
+    color: white;
+    cursor: pointer;
+    
+}
+
+.Select {
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.Down-arrow {
+    cursor: pointer;
+    @media(max-width: 925px) {
+        visibility: hidden;
+    }
+}
+
+.Search-category {
+    background-color: white;
+    height: 30px;
+    display: inline-block;
+}
+
+.Search-box {
+    background-color: white;
+    display: flex;
+    border-radius: 5px;
+    @media(max-width: 925px) {
+            order: 3;
+    }
+    @media(max-width: 610px) {
+        background-color: transparent;
+    }
+}
+
+.Left-side-search {
+    background-color: transparent;
+    height: 30px;
+    width: 50px;
+    border-right: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @media(max-width: 610px) {
+        display: none;
+    }
+}
+
+.Left-side-search label {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.Arrow-icon {
+    color: white;
+}
+
+.searchIconContainer {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0px 0px;
+}
+
+.searchIcon {
+    background-color: transparent;
+    @media(max-width: 610px) {
+        color: white;
+    }
+}
+
+.premiumPlan {
+    color: white;
+    margin-left: 20px;
+    border-right: 2px solid rgb(78, 78, 78);
+    padding: 0px 20px 0px 0px;
+    @media(max-width: 1225px) {
+        display: flex;
+    }
+
+    @media(max-width: 925px) {
+        display: none;
+    }
+}
+
+.premiumPlan span {
+    color: rgb(94, 165, 240);
+    font-weight: bold;
+    @media(max-width: 1225px) {
+        display: inline-block;
+    }
+}
+
+.watchlistContainer {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    @media(max-width: 925px) {
+        display: none;
+    }
+}
+
+.watchlistIcon {
+    background-color: transparent;
+    color: white;
+}
+
+.useApp {
+    display: none;
+    @media(max-width: 925px) {
+        display: block;
+        color: black;
+        background-color: rgb(245, 197, 24);
+        padding: 6px;
+        border-radius: 3px;
+    }
+}

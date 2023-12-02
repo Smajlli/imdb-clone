@@ -1,0 +1,45 @@
+.Search-filter {
+    background-color: rgb(43, 43, 43);
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    margin-left: 200px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+}
+
+.Filter-container {
+    background-color: transparent;
+}
+
+
+.Filter-category {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 7px;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.Filter-category:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.Category-text {
+    color: white;
+    background-color: transparent;
+}
+
+svg {
+    color: rgb(121, 121, 121);
+}
+
+.Filter-category:hover svg {
+    color: white;
+    transition: 0.2s ease;
+}
+
