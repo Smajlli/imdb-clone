@@ -1,0 +1,22 @@
+.trendingMoviesContainer {
+    height: 500px;
+    width: 100vw;
+    background-color: transparent;
+}
+
+.trendingMoviesContentWrapper {
+    display: flex;
+    background-color: transparent;
+    gap: 25px;
+}
+
+.trendingMoviesTitle {
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    border-left: 2px solid rgb(245, 197, 24);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-weight: 600;
+}
