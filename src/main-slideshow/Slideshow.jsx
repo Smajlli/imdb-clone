@@ -1,7 +1,10 @@
 import "./Slideshow.css"
 import SlideshowMovie from "./SlideshowMovie";
+import screenSize from "../hooks/ScreenSize";
 
 function Slideshow({movies}) {
+
+    const screenWidth = screenSize();
 
     if (!movies || movies.length === 0) {
         return null
