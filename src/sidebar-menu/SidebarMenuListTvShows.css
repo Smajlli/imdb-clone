@@ -1,6 +1,6 @@
-.sidebarMenuWatchContainer {
+.sidebarMenuTvShowsContainer {
     background-color: transparent;
-    height: 200px;
+    height: 230px;
     width: 320px;
     display: block;
     border-bottom: 1px solid rgb(78, 78, 78);
@@ -16,5 +16,5 @@
     color: white;
     list-style: none;
     margin-bottom: 22px;
-    font-weight: bold;
+    font-weight: 500;
 }

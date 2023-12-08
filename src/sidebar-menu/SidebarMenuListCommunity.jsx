@@ -1,4 +1,4 @@
-import "./SidebarMenuCommunity.css"
+import "./SidebarMenuListCommunity.css"
 
 function SidebarMenuListCommunity() {
     return(

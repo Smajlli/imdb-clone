@@ -1,8 +1,8 @@
-import "./SidebarMenuList.css"
+import "./SidebarMenuListAwards.css"
 
 function SidebarMenuListAwards() {
     return(
-        <div className="sidebarMenuListContainer">
+        <div className="sidebarMenuListAwardsContainer">
             <ul className="sidebarMenuListItems">
                 <li>Oscars</li>
                 <li>Emmys</li>

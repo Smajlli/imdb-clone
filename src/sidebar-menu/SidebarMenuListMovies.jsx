@@ -1,8 +1,8 @@
-import "./SidebarMenuList.css"
+import "./SidebarMenuListMovies.css"
 
 function SidebarMenuListMovies() {
     return(
-        <div className="sidebarMenuListContainer">
+        <div className="sidebarMenuListMoviesContainer">
             <ul className="sidebarMenuListItems">
                 <li>Release Calendar</li>
                 <li>Top 250 Movies</li>

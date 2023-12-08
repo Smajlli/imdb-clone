@@ -1,4 +1,4 @@
-import "./SidebarMenuTvShows.css"
+import "./SidebarMenuListTvShows.css"
 
 function SidebarMenuListTvShows() {
     return(

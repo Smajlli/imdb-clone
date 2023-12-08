@@ -1,4 +1,4 @@
-import "./SidebarMenuCelebs.css"
+import "./SidebarMenuListCelebs.css"
 
 function SidebarMenuListCelebs() {
     return(

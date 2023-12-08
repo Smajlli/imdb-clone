@@ -1,4 +1,4 @@
-import "./SidebarMenuWatch.css"
+import "./SidebarMenuListWatch.css"
 
 function SidebarMenuListWatch() {
     return(
