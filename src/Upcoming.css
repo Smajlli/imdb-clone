@@ -3,6 +3,7 @@
     width: 1000px;
     height: 450px;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .upcomingHeading {
@@ -96,4 +97,34 @@
 .upcomingContentSubtitle:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.upcomingImgContainerButton {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 30%;
+    margin-left: 20px;
+}
+
+.upcomingImgContainerButton:hover {
+    cursor: pointer;
+    .upcomingImgContainerButtonIcon {
+        color: rgb(245, 197, 24);
+        transition: 0.2s ease;
+    }
+}
+
+.upcomingImgContainerButtonIcon {
+    color: white;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.418);
+    padding: 20px 10px 20px 10px;
+    border: 1px solid white;
+    z-index: 2;
+    border-radius: 3px;
 }
