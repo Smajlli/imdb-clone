@@ -1,0 +1,42 @@
+.actorProfileContainer {
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.actorProfileImgContainer {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.actorProfileImgGradient {
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.actorProfileImgContainer:hover {
+    cursor: pointer;
+    .actorProfileImgGradient {
+        background-color: rgba(0, 0, 0, 0.301);
+        transition: 0.2s ease;
+    }
+}
+
+.actorProfileImgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.actorProfileName {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
