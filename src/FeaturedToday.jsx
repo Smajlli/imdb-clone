@@ -27,7 +27,7 @@ function FeaturedToday({stars}) {
     }, []);
 
 
-    if(!upcomingMovies || upcomingMovies.length === 0 && !stars || stars.length === 0) {
+    if(!upcomingMovies || upcomingMovies.length === 0 || !stars || stars.length === 0) {
         return null 
     } else {
        if(windowSize.width > 1024 || windowSize.width === 1024) {

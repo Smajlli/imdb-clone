@@ -6,7 +6,7 @@ import FeaturedToday from "./FeaturedToday";
 import WhatToWatch from "./WhatToWatch";
 import Trending from "./Trending";
 import Upcoming from "./Upcoming";
-import Actors from "./Actors";
+import Actors from "./actors/Actors";
 
 const apiOptions = {
     method: 'GET', 
@@ -18,6 +18,7 @@ const apiOptions = {
 
 function Home() {
     const [movies, setMovies] = useState([]);
+    const [stars, setStars] = useState([]);
 
     useEffect(() => {
         async function fetchMovies() {
@@ -28,16 +29,26 @@ function Home() {
             setMovies(popularMovies.results);
         }
         fetchMovies();
+
+        async function fetchStars() {
+            const getStars = await fetch('https://api.themoviedb.org/3/trending/person/day?language=en-US&page=1', apiOptions)
+                .catch(err => console.log(err))
+            const starsJson = await getStars.json();
+            const movieStars = starsJson;
+            setStars(movieStars.results);
+        }
+        fetchStars();
     }, [])
 
     return(
         <>
         <Navbar/>
         <Slideshow movies={movies} />
-        <FeaturedToday />
+        <FeaturedToday stars={stars}/>
         <WhatToWatch/>
         <Trending/>
         <Upcoming/>
+        <Actors stars={stars}/>
         </>
     )
 }
