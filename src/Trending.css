@@ -1,6 +1,6 @@
 .trendingMoviesContainer {
     height: 490px;
-    width: 100vw;
+    width: 1200px;
     background-color: transparent;
     @media(max-width: 768px) {
         width: 700px;
@@ -11,7 +11,6 @@
 }
 
 .trendingMoviesContentWrapper {
-    display: flex;
     background-color: transparent;
     gap: 25px;
     position: absolute;
@@ -22,10 +21,10 @@
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    border-left: 2px solid rgb(245, 197, 24);
+    border-left: 3px solid rgb(245, 197, 24);
     margin-bottom: 20px;
     padding-left: 10px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .trendingMoviesContentWrapperButtonContainer {

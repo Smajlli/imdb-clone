@@ -15,14 +15,6 @@
     position: relative;
 }
 
-.whatToWatchMovieCardContainer {
-    display: flex;
-    gap: 25px;
-    @media(max-width: 768px) {
-        gap: 15px;
-    }
-}
-
 .whatToWatchTitle {
     background-color: transparent;
     color: rgb(245, 197, 24);
