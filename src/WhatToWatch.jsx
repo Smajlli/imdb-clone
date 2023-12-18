@@ -50,11 +50,12 @@ function WhatToWatch() {
                                 <Swiper
                                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                                     spaceBetween={0}
-                                    width={420}
-                                    slidesPerView={2}
+                                    width={210}
+                                    slidesPerView={1}
+                                    style={{width: 1250}}
                                 >
                                     {topPicks.map((m) => {
-                                        return <SwiperSlide><MovieCard movie={m} /></SwiperSlide>
+                                        return <SwiperSlide><MovieCard key={m.id} movie={m} /></SwiperSlide>
                                     })}
                                 </Swiper>
                             </div>
