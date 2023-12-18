@@ -4,7 +4,7 @@ function MovieCard({movie}) {
     if(!movie || movie.length === 0) {
         return null 
     } else {
-        const rating = movie.vote_average;
+        const rating = movie.vote_average.toString();
         return (
             <div className="movieCard">
                 <div className="upperCardSection">
@@ -32,7 +32,7 @@ function MovieCard({movie}) {
                                 />
                             </svg>
                         </div>
-                        {rating} </div>
+                        {rating.length > 3 ? `${rating.slice(0, 3)}` : `${rating}`} </div>
                     <div className="movieTitle"> {movie.original_title} </div>
                 </div>
                 <div className="lowerCardSection">
