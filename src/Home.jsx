@@ -8,6 +8,8 @@ import Trending from "./Trending";
 import Upcoming from "./Upcoming";
 import Actors from "./actors/Actors";
 import ContentWrapper from "./ContentWrapper";
+import Shows from "./Shows";
+import Footer from "./Footer";
 
 const apiOptions = {
     method: 'GET', 
@@ -43,14 +45,16 @@ function Home() {
 
     return(
         <>
-            <div className="homeContentWrapper">
-                <Navbar />
+            <Navbar />
+            <div className="homeContent">
                 <Slideshow movies={movies} />
                 <FeaturedToday stars={stars} />
                 <WhatToWatch />
                 <Trending />
                 <Upcoming />
                 <Actors stars={stars} />
+                <Shows/>
+                <Footer/>
             </div>
         </>
     )
