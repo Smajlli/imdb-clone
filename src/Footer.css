@@ -1,0 +1,76 @@
+.footerContainer {
+    max-width: 100%;
+    max-height: 400px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0px 50px 0px;
+} 
+
+.footerButton {
+    background-color: rgb(245, 197, 24);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 8px;
+    border-radius: 3px;
+    color: black;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.footerIconsContainer {
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+}
+
+.footerIcon {
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.footerIcon:hover {
+    background-color: rgba(70, 70, 70, 0.215);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.footerIcon svg {
+    color: white;
+}
+
+.footerLinksContainer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.footerUpperLinks {
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+}
+
+.footerLowerLinks {
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+}
+
+.footerLink {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
