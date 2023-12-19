@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import OptionBar from './OptionBar';
 import SearchFilter from './SearchFilter';
 import NavbarMenu from './NavbarMenu';
@@ -7,18 +7,8 @@ import screenSize from '../hooks/ScreenSize';
 import SidebarMenu from '../sidebar-menu/SidebarMenu';
 
 function Navbar() {
-    const [optionBar, setOptionBar] = useState(false);
-    const [searchFilter, setSearchFilter] = useState(false);
     const [navbarMenu, setNavbarMenu] = useState(false);
     const [sidebarMenu, setSidebarMenu] = useState(false);
-
-    const handleOptionBar = () => {
-        setOptionBar(!optionBar);
-    };
-
-    const handleSearchFilter = () => {
-        setSearchFilter(!searchFilter);
-    };
 
     const handleNavbarMenu = () => {
         setNavbarMenu(!navbarMenu);
