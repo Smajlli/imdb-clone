@@ -1,6 +1,5 @@
 import './App.css'
 import Home from './Home'
-import ContentWrapper from './ContentWrapper'
 
 function App() {
   return (
