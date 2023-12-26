@@ -2,8 +2,6 @@ import './Navbar.css'
 import { useState } from 'react';
 import OptionBar from './OptionBar';
 import SearchFilter from './SearchFilter';
-import NavbarMenu from './NavbarMenu';
-import SidebarMenu from '../sidebar-menu/SidebarMenu';
 import classNames from "classnames";
 import screenSize from "../hooks/ScreenSize";
 
