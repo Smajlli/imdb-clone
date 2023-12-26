@@ -11,6 +11,7 @@ import ContentWrapper from "./ContentWrapper";
 import Shows from "./Shows";
 import Footer from "./Footer";
 
+
 const apiOptions = {
     method: 'GET', 
     headers: {
