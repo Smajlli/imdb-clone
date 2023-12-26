@@ -7,7 +7,6 @@ import WhatToWatch from "./WhatToWatch";
 import Trending from "./Trending";
 import Upcoming from "./Upcoming";
 import Actors from "./actors/Actors";
-import ContentWrapper from "./ContentWrapper";
 import Shows from "./Shows";
 import Footer from "./Footer";
 
