@@ -1,9 +1,11 @@
 .trendingContainer {
-    width: 100vw;
+    width: 1300px;
     height: 500px;
     display: flex;
     margin-top: 10px;
     margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slideshowMoviesContainer {

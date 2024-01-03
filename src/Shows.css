@@ -1,7 +1,8 @@
 .showsContainer {
     width: 1000px;
     height: 450px;
-
+    margin-left: auto;
+    margin-right: auto;
     @media(max-width: 1024px) {
         width: 1000px;
     }

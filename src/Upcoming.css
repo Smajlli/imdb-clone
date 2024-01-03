@@ -1,9 +1,11 @@
 .upcomingContainer {
     background-color: transparent;
-    width: 1000px;
+    width: 1300px;
     height: 450px;
     margin-top: 100px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .upcomingHeading {
@@ -31,7 +33,7 @@
 }
 
 .upcomingImgContainer {
-    width: 400px;
+    width: 386px;
     height: 250px;
     background-color: transparent;
     position: relative;
