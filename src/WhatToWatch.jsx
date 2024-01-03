@@ -52,7 +52,8 @@ function WhatToWatch() {
                                     spaceBetween={0}
                                     width={210}
                                     slidesPerView={1}
-                                    style={{width: 1250}}
+                                    style={{width: 1250, height: 490}}
+                                    navigation
                                 >
                                     {topPicks.map((m) => {
                                         return <SwiperSlide><MovieCard key={m.id} movie={m} /></SwiperSlide>

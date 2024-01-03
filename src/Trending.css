@@ -1,6 +1,8 @@
 .trendingMoviesContainer {
     height: 490px;
-    width: 100%;
+    width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: transparent;
     @media(max-width: 768px) {
         width: 700px;
@@ -28,4 +30,28 @@
     margin-bottom: 20px;
     padding-left: 10px;
     font-weight: 500;
+}
+
+.swiper-button-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 20px 10px 20px 10px;
+    border-radius: 3px;
+}
+
+.swiper-button-next:hover {
+    color: rgb(245, 197, 24);
+    transition: 0.2s ease;
+}
+
+.swiper-button-prev:hover {
+    color: rgb(245, 197, 24);
+    transition: 0.2s ease;
+}
+
+.swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 20px 10px 20px 10px;
+    border-radius: 3px;
 }

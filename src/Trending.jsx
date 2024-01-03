@@ -45,7 +45,8 @@ function Trending() {
                         spaceBetween={0}
                         width={210}
                         slidesPerView={1}
-                        style={{ width: 1250 }}
+                        style={{ width: 1250, height: 490 }}
+                        navigation
                     >
                         {trending.map((m) => {
                             return <SwiperSlide><MovieCard key={m.id} movie={m} /></SwiperSlide>

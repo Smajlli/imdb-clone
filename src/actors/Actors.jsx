@@ -28,6 +28,7 @@ function Actors({stars}) {
                             width={420}
                             slidesPerView={2}
                             style={{ width: 1250 }}
+                            navigation
                         >
                             {stars.map((s) => {
                                 return <SwiperSlide> <ActorProfile key={s.id} actor={s}/> </SwiperSlide>
