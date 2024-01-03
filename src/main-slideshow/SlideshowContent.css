@@ -130,20 +130,6 @@
     background-color: transparent;
 }
 
-.slideshowMovieTitle {
-    background-color: transparent;
-    color: white;
-    font-weight: 300;
-    display: block;
-    z-index: 2;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-
-    @media(max-width: 425px) {
-        font-size: 17px;
-    }
-}
-
 .slideshowMovieTrailer {
     background-color: transparent;
     color: rgb(187, 187, 187);
@@ -158,4 +144,14 @@
 
 .slideshowPlayButton {
     color: white;
+}
+
+.slideshowMainMovieTitle {
+    background-color: transparent;
+    color: white;
+    font-weight: 300;
+    display: block;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }

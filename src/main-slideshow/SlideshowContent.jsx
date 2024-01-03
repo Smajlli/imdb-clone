@@ -67,7 +67,7 @@ function SlideshowContent({movie, handleCarouselNext, handleCarouselPrevious}) {
                         <path d="M16 12L10 16.3301V7.66987L16 12Z" fill="currentColor" />
                     </svg>
                     <div className="slideshowTextContainer">
-                        <p className="slideshowMovieTitle">"{movie.title}"</p>
+                        <p className="slideshowMainMovieTitle">"{movie.title}"</p>
                         <p className="slideshowMovieTrailer">Watch the trailer</p>
                     </div>
                 </div>
