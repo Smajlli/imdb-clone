@@ -1,5 +1,5 @@
 .featuredTodayContainer {
-    width: 1000px;
+    width: 1300px;
     height: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -15,7 +15,7 @@
 }
 
 .featuredTodayContentContainer {
-    width: 100%;
+    width: 1000px;
 }
 
 .featuredTodayContentWrapper {

@@ -1,5 +1,5 @@
 .showsContainer {
-    width: 1000px;
+    width: 1300px;
     height: 450px;
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +17,7 @@
 }
 
 .showsContentContainer {
-    width: 100%;
+    width: 1000px;
 }
 
 .showsContentWrapper {
