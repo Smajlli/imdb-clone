@@ -32,9 +32,23 @@ function Slideshow({movies}) {
                 <div className="trendingContainerRight">
                     <div className="slideshowMoviesTitle">Up Next</div>
                     <div className="slideshowMoviesContainer">
-                        <SlideshowMovie movie={movies[1]} />
-                        <SlideshowMovie movie={movies[2]} />
-                        <SlideshowMovie movie={movies[3]} />
+                        {movie === 0 ? <>
+                            <SlideshowMovie movie={movies[1]} />
+                            <SlideshowMovie movie={movies[2]} />
+                            <SlideshowMovie movie={movies[3]} />
+                        </> : movie === 1 ? <>
+                            <SlideshowMovie movie={movies[2]} />
+                            <SlideshowMovie movie={movies[3]} />
+                            <SlideshowMovie movie={movies[0]} />
+                        </> : movie === 2 ? <>
+                            <SlideshowMovie movie={movies[3]} />
+                            <SlideshowMovie movie={movies[0]} />
+                            <SlideshowMovie movie={movies[1]} />
+                        </> : movie === 3 ? <>
+                            <SlideshowMovie movie={movies[0]} />
+                            <SlideshowMovie movie={movies[1]} />
+                            <SlideshowMovie movie={movies[2]} />
+                        </> : null }
                         <div className="slideshowMoviesFooter">Browse trailers  </div>
                     </div>
                 </div>
