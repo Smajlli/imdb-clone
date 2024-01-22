@@ -1,6 +1,6 @@
 import "./MovieCard.css"
 
-function MovieCard({movie}) {
+function MovieCard({movie, title=movie.title}) {
     if(!movie || movie.length === 0) {
         return null 
     } else {
@@ -33,7 +33,7 @@ function MovieCard({movie}) {
                             </svg>
                         </div>
                         {rating.length > 3 ? `${rating.slice(0, 3)}` : `${rating}`} </div>
-                    <div className="movieTitle"> {movie.original_title} </div>
+                    <div className="movieTitle"> {title} </div>
                 </div>
                 <div className="lowerCardSection">
                     <div className="watchlistButton"> + Watchlist </div>
