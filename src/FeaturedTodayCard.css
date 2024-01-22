@@ -1,0 +1,106 @@
+.featuredTodayCardContent {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+}
+
+.featuredTodayCardContent:hover {
+    cursor: pointer;
+
+    .featuredTodayCardContentImgGradient {
+        background-color: rgba(0, 0, 0, 0.274);
+        transition: 0.2s ease;
+    }
+
+    .featuredTodayCardContentListIcon {
+        color: rgb(245, 197, 24);
+        transition: 0.2s ease;
+    }
+}
+
+.featuredTodayCardContentImgGradient {
+    background-color: transparent;
+    height: 240px;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.829));
+    z-index: 1;
+}
+
+.featuredTodayCardImgContainer {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.featuredTodayCardImgContainer img {
+    object-fit: cover;
+    height: 100%;
+    width: 33.3%;
+}
+
+.featuredTodayCardImgMiddle {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+
+.featuredTodayCardContentList {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    padding-bottom: 10px;
+}
+
+.featuredTodayCardContentListIcon {
+    color: white;
+    bottom: 0;
+
+}
+
+.featuredTodayCardContentListText {
+    background-color: transparent;
+    bottom: 0;
+    color: White;
+    font-family: 'Roboto', sans-serif;
+}
+
+.featuredTodayCardContentTextContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.featuredTodayCardContentTitle {
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.featuredTodayCardContentSubtitle {
+    background-color: transparent;
+    color: #5799ef;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+.featuredTodayCardContentTitle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.featuredTodayCardContentSubtitle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
