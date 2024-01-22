@@ -9,6 +9,9 @@ import Upcoming from "./Upcoming";
 import Actors from "./actors/Actors";
 import Shows from "./Shows";
 import Footer from "./Footer";
+import Tv from "./Tv";
+import BoxOffice from "./BoxOffice";
+
 
 
 const apiOptions = {
@@ -52,9 +55,11 @@ function Home() {
                 <WhatToWatch />
                 <Trending />
                 <Upcoming />
+                <Tv/>
                 <Actors stars={stars} />
                 <Shows/>
                 <Footer/>
+                <BoxOffice/>
             </div>
         </>
     )
