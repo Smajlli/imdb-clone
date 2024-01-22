@@ -8,3 +8,5 @@ While building this project I'm using diffenet technologies and npm packages:
 - React.js
 - HTML
 - CSS
+- classnames
+- Swiper.js
