@@ -1,0 +1,16 @@
+.boxOfficeCardContainer {
+    background-color: transparent;
+    display: flex;
+}
+
+.boxOfficeCardTitle {
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxOfficeCardRevenue {
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
