@@ -12,7 +12,7 @@ const apiOptions = {
 
 function BoxOffice() {
     const[boxOfficeMovies, setBoxOfficeMovies] = useState([]);
-    const[movieRevenue, setMovieRevenue] = useState([{}]);
+    const[movieRevenue, setMovieRevenue] = useState([]);
 
     useEffect(() => {
         async function fetchPopularMovies() {
@@ -32,32 +32,24 @@ function BoxOffice() {
                 .catch(err => console.log(err))
                 const revenueJson = await getRevenue.json();
                 const allRevenue = revenueJson;
-                setMovieRevenue((curr) => [
+                return allRevenue;
+                /* setMovieRevenue((curr) => [
                     ...curr, allRevenue
-                ])
+                ]) */
             }
 
             async function makeRevenue() {
-                return await Promise.all(boxOfficeMovies.map(m => fetchRevenue(m.id)));
+                setMovieRevenue(await Promise.all(boxOfficeMovies.map(m => fetchRevenue(m.id))));
             }
 
             makeRevenue();
         }
     }, [boxOfficeMovies])
 
-    const boxOfficeData = [
-        { title: 'Beekeeper', revenue: 8.5 },
-        { title: 'Mean Girls', revenue: 12 },
-        { title: 'Wonka', revenue: 6.5 },
-        { title: 'Anyone But You', revenue: 5.4 },
-        { title: 'Migration', revenue: 5.3 },
-        { title: 'Aquaman and the Lost Kingdom', revenue: 3.7 }
-    ];
-
-    if(!movieRevenue || movieRevenue.length === 0 ) {
+    if(movieRevenue.length === 0 ) {
         return null 
     } else {
-        <div className='boxOfficeContainer'>
+       <div className='boxOfficeContainer'>
             <div className='boxOfficeHeading'>Explore Movies and TV Shows</div>
             <div className='boxOfficeSubheading'>Top box office US</div>
             <div className='boxOfficeCardContainer'>
@@ -73,15 +65,7 @@ function BoxOffice() {
                 </div>
             </div>
         </div>
-    }
-
-    /* if(!movieRevenue || movieRevenue.length === 0) {
-        return null
-    } else {
-        return (
-            
-        )
-    }  */
+    } 
 
 }
 export default BoxOffice;
