@@ -1,0 +1,42 @@
+.boxOfficeContainer {
+    height: 400px;
+    width: 1400px;
+    background-color: transparent;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.boxOfficeHeading {
+    background-color: transparent;
+    font-size: 2rem;
+    color: rgb(245, 197, 24);
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
+}
+
+.boxOfficeSubheading {
+    color: white;
+    background-color: transparent;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border-left: 3px solid rgb(245, 197, 24);
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.boxOfficeCardContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boxOfficeCardContentLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxOfficeCardContentRight {
+    display: flex;
+    flex-direction: column;
+}
