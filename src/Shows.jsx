@@ -133,9 +133,9 @@ function Shows() {
                                 </div>
                                 <div className='showsContentImgGradient'></div>
                                 <div className='showsImgContainer'>
-                                    <img src={`https://image.tmdb.org/t/p/original${topRatedShows[0].poster_path}`} alt="actorImage" className='featuredTodayImgLeft' />
-                                    <img src={`https://image.tmdb.org/t/p/original${topRatedShows[1].poster_path}`} alt="actorImage" className='featuredTodayImgMiddle' />
-                                    <img src={`https://image.tmdb.org/t/p/original${topRatedShows[2].poster_path}`} alt="actorImage" className='featuredTodayImgRight' />
+                                    <img src={`https://image.tmdb.org/t/p/original${topShows[0].poster_path}`} alt="actorImage" className='featuredTodayImgLeft' />
+                                    <img src={`https://image.tmdb.org/t/p/original${topShows[1].poster_path}`} alt="actorImage" className='featuredTodayImgMiddle' />
+                                    <img src={`https://image.tmdb.org/t/p/original${topShows[2].poster_path}`} alt="actorImage" className='featuredTodayImgRight' />
                                     <div className='showsContentList'>
                                         <svg
                                             width="45"
