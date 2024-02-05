@@ -1,6 +1,37 @@
 .boxOfficeCardContainer {
     background-color: transparent;
     display: flex;
+    gap: 20px;
+}
+
+.boxOfficeBookmark {
+    display: inline-block;
+    background-color: transparent;
+    padding: 0px;
+    height: 30px;
+    transform: rotate(0deg) skew(0deg);
+    border-left: 15px solid rgba(39, 39, 39, 0.808);
+    border-right: 15px solid rgba(39, 39, 39, 0.808);
+    border-bottom: 15px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: rotate(0deg) skew(0deg);
+}
+
+.boxOfficeBookmark:hover {
+    border-left: 15px solid rgb(65, 65, 65);
+    border-right: 15px solid rgb(65, 65, 65);
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.boxOfficeBookmarkText {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    font-size: 1.5rem;
 }
 
 .boxOfficeCardTitle {
@@ -11,6 +42,14 @@
 
 .boxOfficeCardRevenue {
     background-color: transparent;
-    color: white;
+    color: rgb(126, 126, 126);
     font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.boxOfficeInnerContent {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
 }
