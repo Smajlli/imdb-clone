@@ -11,6 +11,7 @@ import Shows from "./Shows";
 import Footer from "./Footer";
 import Tv from "./Tv";
 import BoxOffice from "./BoxOffice";
+import MoreToWatch from "./MoreToWatch";
 
 
 
@@ -56,6 +57,7 @@ function Home() {
                 <Trending />
                 <Upcoming />
                 <Tv/>
+                <MoreToWatch />
                 <Actors stars={stars} />
                 <BoxOffice />
                 <Shows/>
