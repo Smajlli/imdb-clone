@@ -57,9 +57,9 @@ function Home() {
                 <Upcoming />
                 <Tv/>
                 <Actors stars={stars} />
+                <BoxOffice />
                 <Shows/>
                 <Footer/>
-                <BoxOffice/>
             </div>
         </>
     )
