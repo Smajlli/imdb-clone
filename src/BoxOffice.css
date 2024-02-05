@@ -1,9 +1,22 @@
 .boxOfficeContainer {
     height: 400px;
-    width: 1400px;
+    width: 1300px;
     background-color: transparent;
     margin-right: auto;
     margin-left: auto;
+}
+
+.boxOfficeNumber {
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; 
+    padding-right: 10px;
+    border-right: 1px solid rgb(245, 197, 24);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .boxOfficeHeading {
@@ -28,15 +41,19 @@
 
 .boxOfficeCardContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .boxOfficeCardContentLeft {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    margin-right: 100px;
 }
 
 .boxOfficeCardContentRight {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    margin-left: 100px;
 }
