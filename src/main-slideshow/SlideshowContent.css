@@ -2,10 +2,6 @@
     width: 870px;
     height: 550px;
     position: relative;
-
-    @media(max-width: 1024px) {
-        width: 100%;
-    }
 }
 
 .slideshowContainer:hover {
@@ -107,10 +103,6 @@
     z-index: 3;
     align-items: center;
     gap: 50px;
-
-    @media(max-width: 425px) {
-        gap: 20px;
-    }
 }
 
 .slideshowMovieImage {
@@ -119,11 +111,6 @@
     object-fit: cover;
     z-index: 2;
     margin-left: 30px;
-
-    @media(max-width: 425px) {
-        height: 210px;
-        width: 140px;
-    }
 }
 
 .slideshowTextContainer {
@@ -136,10 +123,6 @@
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-
-    @media(max-width: 425px) {
-        font-size: 12px;
-    }
 }
 
 .slideshowPlayButton {
@@ -154,4 +137,27 @@
     z-index: 2;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
+}
+
+@media(max-width: 1024px) {
+    .slideshowContainer {
+        width: 100vw;
+    }
+}
+
+@media(max-width: 425px) {
+    .slideshowMovieImage {
+        width: 90px;
+        height: 133px;
+    }
+    .slideshowPlayButton {
+        width: 50px;
+        height: 50px;
+    }
+    .slideshowMainMovieTitle {
+        font-size: 18px;
+    }
+    .slideshowMovieTrailer {
+        font-size: 13px;
+    }
 }

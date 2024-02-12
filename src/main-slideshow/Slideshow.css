@@ -1,11 +1,11 @@
 .trendingContainer {
     width: 1300px;
-    height: 500px;
+    height: 600px;
     display: flex;
     margin-top: 10px;
-    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: hidden;
 }
 
 .slideshowMoviesContainer {
@@ -30,9 +30,7 @@
 
 .trendingContainerRight {
     height: 550px;
-    @media(max-width: 1024px) {
-        display: none;
-    }
+    overflow-y: hidden;
 }
 
 .slideshowMoviesFooter{
@@ -46,4 +44,10 @@
 .slideshowMoviesFooter:hover {
     color: rgb(245, 197, 24);
     cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+    .trendingContainerRight {
+        display: none;
+    }
 }
