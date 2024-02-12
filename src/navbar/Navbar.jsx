@@ -4,6 +4,7 @@ import OptionBar from './OptionBar';
 import SearchFilter from './SearchFilter';
 import classNames from "classnames";
 import screenSize from "../hooks/ScreenSize";
+import SidebarMenu from '../sidebar-menu/SidebarMenu';
 
 function Navbar() {
     const [navbarMenu, setNavbarMenu] = useState(false);
@@ -277,11 +278,7 @@ function Navbar() {
                                     <span className='Hamburger'></span>
                                     <span className='Hamburger'></span>
                                     <span className='Hamburger'></span>
-                                </div> : <div className='Hamburger-wrapper' onClick={handleSidebarMenu}>
-                                    <span className='Hamburger'></span>
-                                    <span className='Hamburger'></span>
-                                    <span className='Hamburger'></span>
-                                </div>}
+                                </div> : <SidebarMenu handleSidebar={handleSidebarMenu}/>}
                                 <div className='Menu-text' onClick={handleNavbarMenu}>Menu</div>
                             </div>
                             <SearchFilter/>
@@ -315,3 +312,9 @@ function Navbar() {
 }
 
 export default Navbar;
+
+{/* <div className='Hamburger-wrapper' onClick={handleSidebarMenu}>
+    <span className='Hamburger'></span>
+    <span className='Hamburger'></span>
+    <span className='Hamburger'></span>
+</div> */}

@@ -2,14 +2,6 @@
     background-color: white;
     display: flex;
     border-radius: 5px;
-
-    @media(max-width: 925px) {
-        order: 3;
-    }
-
-    @media(max-width: 610px) {
-        background-color: transparent;
-    }
 }
 
 .Left-side-search {
@@ -22,10 +14,6 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    @media(max-width: 610px) {
-        display: none;
-    }
 }
 
 .Left-side-search label {
@@ -46,10 +34,6 @@
 
 .searchIcon {
     background-color: transparent;
-
-    @media(max-width: 610px) {
-        color: white;
-    }
 }
 
 .Search-filter {
@@ -66,6 +50,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.5s ease;
+    overflow-y: hidden;
 }
 
 .activeSearchFilter {
@@ -119,3 +104,39 @@ svg {
     transition: 0.2s ease;
 }
 
+@media(max-width: 1024px) {
+    #search {
+        width: 300px;
+    }
+    .Search-filter {
+        left: 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .Search-box {
+        order: 2;
+    }
+    .Search-filter {
+        margin-left: 150px;
+    }
+}
+
+@media(max-width: 425px) {
+    .Search-box {
+        background-color: transparent;
+    }
+    .Left-side-search {
+        display: none;
+    }
+    .Right-side-search {
+        display: none;
+    }
+    .searchIconContainer {
+        background-color: transparent;
+        padding: 0;
+    }
+    .searchIcon {
+        color: white;
+    }
+}
