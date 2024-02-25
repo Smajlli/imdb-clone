@@ -29,7 +29,7 @@
 .upcomingContentContainer {
     background-color: transparent;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .upcomingImgContainer {
@@ -129,4 +129,15 @@
     border: 1px solid white;
     z-index: 2;
     border-radius: 3px;
+}
+
+@media(max-width: 1024px) {
+    .upcomingContainer {
+        width: 1000px;
+    }
+    .upcomingImgContainer {
+        width: 320px;
+        height: 220px;
+    }
+
 }
