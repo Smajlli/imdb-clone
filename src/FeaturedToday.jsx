@@ -61,50 +61,64 @@ function FeaturedToday({stars}) {
     if(!upcomingMovies || upcomingMovies.length === 0 || !stars || stars.length === 0 || !shows || shows.length === 0 || !theaters || theaters.length === 0) {
         return null 
     } else {
-       if(windowSize.width > 1024 || windowSize.width === 1024) {
            return <>
                <div className='featuredTodayContainer'>
                    <div className='featuredTodayHeading'>Featured today</div>
                    <div className='featuredTodayContentContainer'>
                        <div className="featuredTodayContentWrapper">
-                           <Swiper
+                           {windowSize.width > 768 ? <Swiper
                                modules={[Navigation, Pagination, Scrollbar, A11y]}
                                spaceBetween={50}
-                               width={450}
                                slidesPerView={1}
                                style={{ width: 1250, height: 490 }}
                                navigation
+                               loop
                            >
-                               <SwiperSlide><FeaturedTodayCard content={upcomingMovies} title={"Upcoming movies"} subTitle={"See all upcoming movies"} /></SwiperSlide>
-                               <SwiperSlide><FeaturedTodayCard content={stars} title={"Popular Actors"} subTitle={"See all trending actors"} /></SwiperSlide>
-                               <SwiperSlide><FeaturedTodayCard content={shows} title={"Trending TV Shows"} subTitle={"See poprular TV Shows for today"} /></SwiperSlide>
-                               <SwiperSlide><FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} /></SwiperSlide>
-                           </Swiper>  
+                               <SwiperSlide>
+                                   <div className='featuredTodayCardsContainer'>
+                                       <FeaturedTodayCard content={upcomingMovies} title={"Upcoming movies"} subTitle={"See all upcoming movies"} />
+                                       <FeaturedTodayCard content={stars} title={"Popular Actors"} subTitle={"See all trending actors"} />
+                                   </div>
+                               </SwiperSlide>
+                               <SwiperSlide>
+                                   <div className='featuredTodayCardsContainer'>
+                                       <FeaturedTodayCard content={shows} title={"Trending TV Shows"} subTitle={"See poprular TV Shows for today"} />
+                                       <FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} />
+                                   </div>
+                               </SwiperSlide>
+                           </Swiper> : windowSize.width < 768 || windowSize.width === 768 ? <Swiper
+                               modules={[Navigation, Pagination, Scrollbar, A11y]}
+                               spaceBetween={50}
+                               slidesPerView={1}
+                               style={{ width: 1250, height: 490 }}
+                               navigation
+                               loop
+                           >
+                               <SwiperSlide>
+                                   <div className='featuredTodayCardsContainer'>
+                                       <FeaturedTodayCard content={upcomingMovies} title={"Upcoming movies"} subTitle={"See all upcoming movies"} />
+                                   </div>
+                               </SwiperSlide>
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={stars} title={"Popular Actors"} subTitle={"See all trending actors"} />
+                                       </div>
+                                   </SwiperSlide>
+                               <SwiperSlide>
+                                   <div className='featuredTodayCardsContainer'>
+                                       <FeaturedTodayCard content={shows} title={"Trending TV Shows"} subTitle={"See poprular TV Shows for today"} />
+                                   </div>
+                               </SwiperSlide>
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} />
+                                       </div>
+                                   </SwiperSlide>
+                           </Swiper> : null}
                        </div>
                    </div>
                </div>
            </>
-       } else {
-        return <>
-            <div className='featuredTodayContainer'>
-                <div className='featuredTodayHeading'>Featured today</div>
-                <div className='featuredTodayContentContainer'>
-                    <div className="featuredTodayContentWrapper">
-                        <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            spaceBetween={50}
-                            width={500}
-                            slidesPerView={1}
-                            style={{ width: 1250, height: 490 }}
-                            navigation
-                        >
-                            <SwiperSlide><FeaturedTodayCard content={upcomingMovies} title={"Upcoming movies"} subTitle={"See all upcoming movies"} /></SwiperSlide>
-                        </Swiper>
-                    </div>
-                </div>
-            </div>
-        </>
-       }
     }
 }
 
