@@ -4,12 +4,6 @@
     margin-right: auto;
     margin-left: auto;
     background-color: transparent;
-    @media(max-width: 768px) {
-        width: 700px;
-    }
-    @media(max-width: 425px) {
-        width: 400px;
-    }
 }
 
 .trendingMoviesContentWrapper {
@@ -54,4 +48,21 @@
     background-color: rgba(0, 0, 0, 0.411);
     padding: 20px 10px 20px 10px;
     border-radius: 3px;
+}
+
+.trendingMoviesCardsContainerContent {
+    display: flex;
+    gap: 20px;
+}
+
+@media(max-width: 1024px) {
+    .trendingMoviesCardsContainerContent {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 425px) {
+    .trendingMoviesContainer {
+        width: 425px;
+    }
 }
