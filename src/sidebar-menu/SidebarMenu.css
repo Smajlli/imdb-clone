@@ -1,23 +1,60 @@
 .sidebarMenu {
-    background-color: rgb(43, 43, 43);
-    height: 100vh;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    position: absolute;
-    z-index: 5;
+    background-color: transparent;
+    width: 50px;
 }
 
 .sidebarMenu * {
     background-color: transparent;
 }
 
-.sidebarMenuContainer {
+.sidebarMenuHamburgerContainer {
     display: flex;
     flex-direction: column;
+    gap: 4px;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
 }
 
+.sidebarMenuHamburger {
+    height: 2px;
+    width: 20px;
+    background-color: white;
+}
+
+.sidebarMenuContainer {
+    background-color: rgb(43, 43, 43);
+    height: 100%;
+    width: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    opacity: 0;
+    left: 0;
+    transition: width 0.2s linear;
+}
+
+.activeSidebarMenuContainer {
+    background-color: rgb(25, 25, 25);
+    height: 100%;
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    opacity: 1;
+    left: 0;
+    white-space: nowrap;
+    transition: width .1s ease;
+}
 
 .sidebarMenuCategory {
     display: flex;
@@ -28,6 +65,7 @@
 
 .sidebarCategoryIcon {
     color: white;
+    flex-shrink: 0;
 }
 
 .sidebarCategoryHeading {
@@ -36,6 +74,8 @@
 
 .sidebarMenuClose {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sidebarCloseButton {
