@@ -102,7 +102,7 @@ function WhatToWatch() {
                                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                                 spaceBetween={0}
                                 slidesPerView={4}
-                                style={{ width: 750, height: 490 }}
+                                style={{ width: 768, height: 490 }}
                                 loop
                             >
                                 <SwiperSlide> <MovieCard movie={topPicks[0]} /> </SwiperSlide>
