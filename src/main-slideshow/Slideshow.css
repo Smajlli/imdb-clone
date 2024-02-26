@@ -47,7 +47,24 @@
 }
 
 @media(max-width: 1024px) {
+    .trendingContainer {
+        width: 1024px;
+    }
     .trendingContainerRight {
         display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .trendingContainer {
+        width: 768px;
+        height: 550px;
+    }
+}
+
+@media(max-width: 425px) {
+    .trendingContainer {
+        width: 425px;
+        height: 550px;
     }
 }
