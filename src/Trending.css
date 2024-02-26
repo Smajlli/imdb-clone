@@ -1,5 +1,5 @@
 .trendingMoviesContainer {
-    height: 490px;
+    height: 600px;
     width: 1300px;
     margin-right: auto;
     margin-left: auto;
@@ -56,8 +56,17 @@
 }
 
 @media(max-width: 1024px) {
+    .trendingMoviesContainer {
+        width: 1024px;
+    }
     .trendingMoviesCardsContainerContent {
         gap: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .trendingMoviesContainer {
+        width: 768px;
     }
 }
 
