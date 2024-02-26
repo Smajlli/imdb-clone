@@ -55,11 +55,10 @@ function Home() {
                 <FeaturedToday stars={stars} />
                 <WhatToWatch />
                 <Trending />
-                <Upcoming />
-                <Tv/>
+                {/* <Tv/> */}
                 <MoreToWatch />
-                <Actors stars={stars} />
-                <BoxOffice />
+                <Actors stars={stars}/>
+                <BoxOffice/>
                 <Shows/>
                 <Footer/>
             </div>
