@@ -64,7 +64,29 @@
     margin-left: 100px;
 }
 
+@media(max-width: 1024px) {
+    .boxOfficeContainer {
+        width: 1024px;
+    }
+}
+
+@media(max-width: 768px) {
+    .boxOfficeContainer {
+        width: 768px;
+        height: 400px;
+        margin-top: 60px;
+    }
+    .boxOfficeHeading {
+        margin-bottom: 25px;
+    }
+}
+
 @media(max-width: 425px) {
+    .boxOfficeContainer {
+        width: 425px;
+        height: 550px;
+        margin-bottom: 40px;
+    }
     .boxOfficeCardsWrapper {
         flex-direction: column;
         gap: 30px;
