@@ -70,7 +70,7 @@ function FeaturedToday({stars}) {
                                modules={[Navigation, Pagination, Scrollbar, A11y]}
                                spaceBetween={50}
                                slidesPerView={1}
-                               style={{ width: 1250, height: 490 }}
+                               style={{ width: 1250, height: 350 }}
                                navigation
                                loop
                            >
@@ -86,11 +86,11 @@ function FeaturedToday({stars}) {
                                        <FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} />
                                    </div>
                                </SwiperSlide>
-                           </Swiper> : windowSize.width < 768 || windowSize.width === 768 ? <Swiper
+                           </Swiper> : windowSize.width === 768 ? <Swiper
                                modules={[Navigation, Pagination, Scrollbar, A11y]}
                                spaceBetween={50}
                                slidesPerView={1}
-                               style={{ width: 1250, height: 490 }}
+                               style={{ width: 768, height: 350 }}
                                navigation
                                loop
                            >
@@ -114,7 +114,35 @@ function FeaturedToday({stars}) {
                                            <FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} />
                                        </div>
                                    </SwiperSlide>
-                           </Swiper> : null}
+                               </Swiper> : windowSize.width === 425 ? <Swiper
+                                   modules={[Navigation, Pagination, Scrollbar, A11y]}
+                                   spaceBetween={50}
+                                   slidesPerView={1}
+                                   style={{ width: 425, height: 350 }}
+                                   navigation
+                                   loop
+                               >
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={upcomingMovies} title={"Upcoming movies"} subTitle={"See all upcoming movies"} />
+                                       </div>
+                                   </SwiperSlide>
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={stars} title={"Popular Actors"} subTitle={"See all trending actors"} />
+                                       </div>
+                                   </SwiperSlide>
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={shows} title={"Trending TV Shows"} subTitle={"See poprular TV Shows for today"} />
+                                       </div>
+                                   </SwiperSlide>
+                                   <SwiperSlide>
+                                       <div className='featuredTodayCardsContainer'>
+                                           <FeaturedTodayCard content={theaters} title={"Now Playing"} subTitle={"See what's currently in theaters"} />
+                                       </div>
+                                   </SwiperSlide>
+                               </Swiper> : null}
                        </div>
                    </div>
                </div>
