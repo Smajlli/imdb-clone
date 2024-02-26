@@ -1,17 +1,9 @@
-.whatToWatchContainer {
+.tvContainer {
     height: 700px;
     width: 100%;
-
-    @media(max-width: 768px) {
-        width: 700px;
-    }
-
-    @media(max-width: 425px) {
-        width: 400px;
-    }
 }
 
-.whatToWatchContentContainer {
+.tvContentContainer {
     width: 1300px;
     height: 100%;
     position: relative;
@@ -19,13 +11,13 @@
     margin-right: auto;
 }
 
-.whatToWatchContentWrapper {
+.tvContentWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.whatToWatchMovieCardContainer {
+.tvMovieCardContainer {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -34,7 +26,7 @@
     justify-content: center;
 }
 
-.whatToWatchTitle {
+.tvTitle {
     background-color: transparent;
     color: rgb(245, 197, 24);
     font-family: 'Roboto', sans-serif;
@@ -42,12 +34,12 @@
     margin-bottom: 40px;
 }
 
-.whatToWatchSubtitleContainer {
+.tvSubtitleContainer {
     background-color: transparent;
     margin-bottom: 30px;
 }
 
-.whatToWatchTopPicksText {
+.tvTopPicksText {
     background-color: transparent;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -57,7 +49,7 @@
     margin-bottom: 10px;
 }
 
-.whatToWatchText {
+.tvText {
     background-color: transparent;
     color: rgb(187, 187, 187);
     font-family: 'Roboto', sans-serif;
@@ -86,4 +78,38 @@
     background-color: rgba(0, 0, 0, 0.411);
     padding: 20px 10px 20px 10px;
     border-radius: 3px;
+}
+
+.tvMovieCardsContainerContent {
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
+}
+
+.nameContainer {
+    background-color: transparent;
+    height: 20px;
+    width: 100px;
+}
+
+.tvName {
+    color: white;
+}
+
+@media(max-width: 1024px) {
+    .tvContainer {
+        width: 1024px;
+    }
+}
+
+@media(max-width: 768px) {
+    .tvContainer {
+        width: 768px;
+    }
+}
+
+@media(max-width: 425px) {
+    .tvContainer {
+        width: 425px;
+    }
 }
