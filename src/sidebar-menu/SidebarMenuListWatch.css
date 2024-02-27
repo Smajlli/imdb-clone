@@ -1,7 +1,7 @@
 .sidebarMenuWatchContainer {
     background-color: transparent;
-    height: 220px;
-    width: 320px;
+    height: auto;
+    width: 100%;
     display: block;
     border-bottom: 1px solid rgb(78, 78, 78);
     margin-bottom: 20px;
