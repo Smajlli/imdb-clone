@@ -90,6 +90,7 @@
 .Menu-wrapper {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .Hamburger-wrapper {
