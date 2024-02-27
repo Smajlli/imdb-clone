@@ -29,26 +29,56 @@ function SidebarMenu({handleSidebar}) {
 
     const handleSidebarMenuListMovies = () => {
         setSidebarMenuListMovies(!sidebarMenuListMovies);
+        setSidebarMenuListTvShows(false);
+        setSidebarMenuListWatch(false);
+        setSidebarMenuListAwards(false);
+        setSidebarMenuListCelebs(false);
+        setSidebarMenuListCommunity(false);
     };
 
     const handleSidebarMenuListTvShows = () => {
         setSidebarMenuListTvShows(!sidebarMenuListTvShows);
+        setSidebarMenuListMovies(false);
+        setSidebarMenuListWatch(false);
+        setSidebarMenuListAwards(false);
+        setSidebarMenuListCelebs(false);
+        setSidebarMenuListCommunity(false);
     };
 
     const handleSidebarMenuListWatch = () => {
         setSidebarMenuListWatch(!sidebarMenuListWatch);
+        setSidebarMenuListTvShows(false);
+        setSidebarMenuListMovies(false);
+        setSidebarMenuListAwards(false);
+        setSidebarMenuListCelebs(false);
+        setSidebarMenuListCommunity(false);
     };
 
     const handleSidebarMenuListAwards = () => {
         setSidebarMenuListAwards(!sidebarMenuListAwards);
+        setSidebarMenuListTvShows(false);
+        setSidebarMenuListMovies(false);
+        setSidebarMenuListWatch(false);
+        setSidebarMenuListCelebs(false);
+        setSidebarMenuListCommunity(false);
     };
 
     const handleSidebarMenuListCelebs = () => {
         setSidebarMenuListCelebs(!sidebarMenuListCelebs);
+        setSidebarMenuListTvShows(false);
+        setSidebarMenuListMovies(false);
+        setSidebarMenuListWatch(false);
+        setSidebarMenuListCommunity(false);
+        setSidebarMenuListAwards(false);
     };
 
     const handleSidebarMenuListCommunity = () => {
         setSidebarMenuListCommunity(!sidebarMenuListCommunity);
+        setSidebarMenuListTvShows(false);
+        setSidebarMenuListMovies(false);
+        setSidebarMenuListWatch(false);
+        setSidebarMenuListCelebs(false);
+        setSidebarMenuListAwards(false);
     };
 
     return(
