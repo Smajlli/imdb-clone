@@ -305,7 +305,6 @@ function Navbar() {
                         <OptionBar/>
                     </div>
                     </div>
-                {/* {sidebarMenu ? <SidebarMenu handleSidebar={handleSidebarMenu} /> : null} */}
             </>
         )
     
