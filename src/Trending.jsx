@@ -1,15 +1,6 @@
 import './Trending.css'
 import { useState, useEffect } from 'react';
-import MovieCard from './MovieCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import screenSize from './hooks/ScreenSize';
+import MovieSlider from './MovieSlider';
 
 
 const apiOptions = {
@@ -22,8 +13,6 @@ const apiOptions = {
 
 function Trending() {
     const [trending, setTrending] = useState([]);
-
-    const windowSize = screenSize();
 
     useEffect(() => {
         async function fetchTrendingMovies() {
@@ -54,81 +43,7 @@ function Trending() {
         }
 
         return (
-            <div className='trendingMoviesContainer'>
-                <div className="trendingMoviesTitle">Trending this week</div>
-                <div className='trendingMoviesContentWrapper'>
-                    {windowSize.width >= 1024 ? <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={0}
-                        slidesPerView={1}
-                        style={{ width: 1024, height: 490 }}
-                        navigation
-                        loop
-                    >
-                        <SwiperSlide>
-                            <div className='trendingMoviesCardsContainer'>
-                                <div className='trendingMoviesCardsContainerContent'>
-                                    {trendingArray1.map((m) => {
-                                        return <MovieCard key={m.id} movie={m} />
-                                    })}
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='trendingMoviesCardsContainer'>
-                                <div className='trendingMoviesCardsContainerContent'>
-                                    {trendingArray2.map((m) => {
-                                        return <MovieCard key={m.id} movie={m} />
-                                    })}
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='trendingMoviesCardsContainer'>
-                                <div className='trendingMoviesCardsContainerContent'>
-                                    {trendingArray3.map((m) => {
-                                        return <MovieCard key={m.id} movie={m} />
-                                    })}
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper> : windowSize.width === 768 ? <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={0}
-                        slidesPerView={4}
-                        style={{ width: 768, height: 490 }}
-                        loop
-                    >
-                        <SwiperSlide> <MovieCard movie={trending[0]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[1]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[2]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[3]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[4]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[5]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[6]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[7]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[8]} /> </SwiperSlide>
-                        <SwiperSlide> <MovieCard movie={trending[9]} /> </SwiperSlide>
-                        </Swiper> : windowSize.width === 425 ? <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            spaceBetween={0}
-                            slidesPerView={2}
-                            style={{ width: 420, height: 490 }}
-                            loop
-                        >
-                            <SwiperSlide> <MovieCard movie={trending[0]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[1]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[2]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[3]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[4]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[5]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[6]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[7]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[8]} /> </SwiperSlide>
-                            <SwiperSlide> <MovieCard movie={trending[9]} /> </SwiperSlide>
-                        </Swiper> : null}
-                </div>
-            </div>
+            <MovieSlider moviesArray={trending} moviesArray1={trendingArray1} moviesArray2={trendingArray2} moviesArray3={trendingArray3} heading={"Trending this week"} />
         )
     }       
 }

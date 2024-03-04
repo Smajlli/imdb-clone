@@ -1,15 +1,6 @@
 import './WhatToWatch.css'
 import { useState, useEffect } from 'react';
-import MovieCard from './MovieCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import screenSize from './hooks/ScreenSize';
+import MovieSlider from './MovieSlider';
 
 const apiOptions = {
     method: 'GET',
@@ -21,8 +12,6 @@ const apiOptions = {
 
 function WhatToWatch() {
     const [topPicks, setTopPicks] = useState([]);
-
-    const windowSize = screenSize();
 
     useEffect(() => {
         async function fetchTopPicks() {
@@ -52,92 +41,7 @@ function WhatToWatch() {
             topPicksArray3.push(topPicks[i]);
         }
         return <>
-                <div className='whatToWatchContainer'>
-                    <div className="whatToWatchContentContainer">
-                        <div className='whatToWatchTitle'>What to watch</div>
-                        <div className="whatToWatchSubtitleContainer">
-                            <div className="whatToWatchTopPicksText">
-                                Top picks
-                            </div>
-                            <div className='whatToWatchText'>TV shows and movies just for you</div>
-                        </div>
-                        <div className="whatToWatchContentWrapper">
-                            <div className="whatToWatchMovieCardWrapper">
-                            {windowSize.width >= 1024 ? <Swiper
-                                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                                spaceBetween={50}
-                                slidesPerView={1}
-                                style={{ width: 1024, height: 490 }}
-                                navigation
-                                loop
-                            >
-                                <SwiperSlide>
-                                    <div className='whatToWatchMovieCardsContainer'>
-                                        <div className='whatToWatchMovieCardsContainerContent'>
-                                            {topPicksArray1.map((m) => {
-                                                return <MovieCard movie={m} />
-                                            })}
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className='whatToWatchMovieCardsContainer'>
-                                        <div className='whatToWatchMovieCardsContainerContent'>
-                                            {topPicksArray2.map((m) => {
-                                                return <MovieCard movie={m} />
-                                            })}
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className='whatToWatchMovieCardsContainer'>
-                                        <div className='whatToWatchMovieCardsContainerContent'>
-                                            {topPicksArray3.map((m) => {
-                                                return <MovieCard movie={m} />
-                                            })}
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            </Swiper> : windowSize.width === 768 ? <Swiper
-                                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                                spaceBetween={0}
-                                slidesPerView={4}
-                                style={{ width: 768, height: 490 }}
-                                loop
-                            >
-                                <SwiperSlide> <MovieCard movie={topPicks[0]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[1]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[2]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[3]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[4]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[5]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[6]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[7]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[8]} /> </SwiperSlide>
-                                <SwiperSlide> <MovieCard movie={topPicks[9]} /> </SwiperSlide>
-                                </Swiper> : windowSize.width === 425 ? <Swiper
-                                    modules={[Navigation, Pagination, Scrollbar, A11y]}
-                                    spaceBetween={0}
-                                    slidesPerView={2}
-                                    style={{ width: 420, height: 490 }}
-                                    loop
-                                >
-                                    <SwiperSlide> <MovieCard movie={topPicks[0]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[1]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[2]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[3]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[4]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[5]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[6]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[7]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[8]} /> </SwiperSlide>
-                                    <SwiperSlide> <MovieCard movie={topPicks[9]} /> </SwiperSlide>
-                                </Swiper> : null}
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <MovieSlider moviesArray={topPicks} moviesArray1={topPicksArray1} moviesArray2={topPicksArray2} moviesArray3={topPicksArray3} title={"What to watch"} heading={"Top picks"} subheading={"Tv shows and movies just for you"}/>
             </>
         } 
 }
