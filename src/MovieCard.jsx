@@ -33,7 +33,7 @@ function MovieCard({movie, title=movie.title}) {
                             </svg>
                         </div>
                         {rating.length > 3 ? `${rating.slice(0, 3)}` : `${rating}`} </div>
-                    <div className="movieTitle"> {title} </div>
+                    <div className="movieTitle"> {title ? title : movie.name} </div>
                 </div>
                 <div className="lowerCardSection">
                     <div className="watchlistButton"> + Watchlist </div>
