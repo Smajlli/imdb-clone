@@ -1,6 +1,6 @@
-import './WhatToWatch.css'
 import { useState, useEffect } from 'react';
 import MovieSlider from './MovieSlider';
+import {fetchTopPicks} from './hooks/fetchData';
 
 const apiOptions = {
     method: 'GET',
@@ -13,7 +13,9 @@ const apiOptions = {
 function WhatToWatch() {
     const [topPicks, setTopPicks] = useState([]);
 
-    useEffect(() => {
+    console.log(fetchTopPicks())
+
+    /* useEffect(() => {
         async function fetchTopPicks() {
             const getTopPicks = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', apiOptions)
             .catch(err => console.log(err))
@@ -22,7 +24,7 @@ function WhatToWatch() {
             setTopPicks(allTopPicks.results);
         }
         fetchTopPicks();
-    }, [])
+    }, []) */
 
     if(!topPicks || topPicks.length === 0) {
         return null

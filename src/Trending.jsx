@@ -1,4 +1,3 @@
-import './Trending.css'
 import { useState, useEffect } from 'react';
 import MovieSlider from './MovieSlider';
 
