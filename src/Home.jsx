@@ -49,13 +49,13 @@ function Home() {
 
     return(
         <>
-            <Navbar />
             <div className="homeContent">
+                <Navbar />
                 <Slideshow movies={movies} />
                 <FeaturedToday stars={stars} />
                 <WhatToWatch />
                 <Trending />
-                {/* <Tv/> */}
+                <Tv/>
                 <MoreToWatch />
                 <Actors stars={stars}/>
                 <BoxOffice/>
