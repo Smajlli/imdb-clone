@@ -1,0 +1,111 @@
+.movieSliderContainer {
+    height: 700px;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.movieSliderContentContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.movieSliderContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movieSliderMovieCardWrapper {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movieSliderTitle {
+    background-color: transparent;
+    color: rgb(245, 197, 24);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.movieSliderSubtitleContainer {
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+
+.movieSliderHeading {
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    border-left: 3px solid rgb(245, 197, 24);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.movieSliderSubheading {
+    background-color: transparent;
+    color: rgb(187, 187, 187);
+    font-family: 'Roboto', sans-serif;
+    size: 1rem;
+}
+
+.swiper-button-next {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 20px 10px 20px 10px;
+    border-radius: 3px;
+}
+
+.swiper-button-next:hover {
+    color: rgb(245, 197, 24);
+    transition: 0.2s ease;
+}
+
+.swiper-button-prev:hover {
+    color: rgb(245, 197, 24);
+    transition: 0.2s ease;
+}
+
+.swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 20px 10px 20px 10px;
+    border-radius: 3px;
+}
+
+.movieSliderMovieCardsContainerContent {
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width: 1024px) {
+    .movieSliderContainer {
+        width: 1024px;
+    }
+    .movieSliderMovieCardsContainerContent {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .movieSliderContainer {
+        width: 768px;
+    }
+}
+
+@media(max-width: 425px) {
+    .movieSliderContainer {
+        width: 425px;
+    }
+    .movieSliderContentContainer {
+        width: 425px;
+    }
+}
