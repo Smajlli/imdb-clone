@@ -2,29 +2,14 @@ import { useState, useEffect } from 'react';
 import MovieSlider from './MovieSlider';
 import {fetchTopPicks} from './hooks/fetchData';
 
-const apiOptions = {
-    method: 'GET',
-    headers: {
-        accept: 'application/JSON',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTQxYjExNjU0YWNmYzgxMGU5YjJmNGQ4NDIwMGI4MyIsInN1YiI6IjY1NDBkOGI2NjNlNmZiMDBhZTUwZmIwYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Irw-tikSu-2o1FYLfDZFDlq-L3jn7pjzh6ExNSBr6pk'
-    }
-};
-
 function WhatToWatch() {
     const [topPicks, setTopPicks] = useState([]);
 
-    console.log(fetchTopPicks())
+    console.log(topPicks);
 
-    /* useEffect(() => {
-        async function fetchTopPicks() {
-            const getTopPicks = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', apiOptions)
-            .catch(err => console.log(err))
-            const topPicksJson = await getTopPicks.json();
-            const allTopPicks = topPicksJson;
-            setTopPicks(allTopPicks.results);
-        }
-        fetchTopPicks();
-    }, []) */
+    useEffect(() => {
+        fetchTopPicks().then((res) => { setTopPicks(res.results) });
+    }, [])
 
     if(!topPicks || topPicks.length === 0) {
         return null
