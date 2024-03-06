@@ -12,39 +12,15 @@ import Footer from "./Footer";
 import Tv from "./Tv";
 import BoxOffice from "./BoxOffice";
 import MoreToWatch from "./MoreToWatch";
-
-
-
-const apiOptions = {
-    method: 'GET', 
-    headers: {
-        accept: 'application/JSON', 
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTQxYjExNjU0YWNmYzgxMGU5YjJmNGQ4NDIwMGI4MyIsInN1YiI6IjY1NDBkOGI2NjNlNmZiMDBhZTUwZmIwYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Irw-tikSu-2o1FYLfDZFDlq-L3jn7pjzh6ExNSBr6pk'
-    }
-};
+import { fetchMovies, fetchActors } from "./hooks/fetchData";
 
 function Home() {
     const [movies, setMovies] = useState([]);
-    const [stars, setStars] = useState([]);
+    const [actors, setActors] = useState([]);
 
     useEffect(() => {
-        async function fetchMovies() {
-            const getMovies = await fetch('https://api.themoviedb.org/3/movie/popular?laguange=en-US&page=1', apiOptions)
-            .catch(err => console.log(err)) 
-            const moviesJson = await getMovies.json();
-            const popularMovies = moviesJson;
-            setMovies(popularMovies.results);
-        }
-        fetchMovies();
-
-        async function fetchStars() {
-            const getStars = await fetch('https://api.themoviedb.org/3/trending/person/day?language=en-US&page=1', apiOptions)
-                .catch(err => console.log(err))
-            const starsJson = await getStars.json();
-            const movieStars = starsJson;
-            setStars(movieStars.results);
-        }
-        fetchStars();
+        fetchMovies().then((res) => {setMovies(res.results)});
+        fetchActors().then((res) => {setActors(res.results)});
     }, [])
 
     return(
@@ -52,12 +28,13 @@ function Home() {
             <div className="homeContent">
                 <Navbar />
                 <Slideshow movies={movies} />
-                <FeaturedToday stars={stars} />
+                <FeaturedToday stars={actors} />
                 <WhatToWatch />
                 <Trending />
                 <Tv/>
                 <MoreToWatch />
-                <Actors stars={stars}/>
+                <Upcoming/>
+                <Actors stars={actors}/>
                 <BoxOffice/>
                 <Shows/>
                 <Footer/>
