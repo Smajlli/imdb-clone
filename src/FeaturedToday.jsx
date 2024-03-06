@@ -10,15 +10,7 @@ import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-const apiOptions = {
-    method: 'GET',
-    headers: {
-        accept: 'application/JSON',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTQxYjExNjU0YWNmYzgxMGU5YjJmNGQ4NDIwMGI4MyIsInN1YiI6IjY1NDBkOGI2NjNlNmZiMDBhZTUwZmIwYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Irw-tikSu-2o1FYLfDZFDlq-L3jn7pjzh6ExNSBr6pk'
-    }                  
-};
-
+import { fetchUpcomingMovies, fetchShows, fetchTheaters } from './hooks/fetchData';
 
 function FeaturedToday({stars}) {
     const[upcomingMovies, setUpcomingMovies] = useState([]);
@@ -28,33 +20,9 @@ function FeaturedToday({stars}) {
     const windowSize = screenSize()
 
     useEffect(() => {
-        async function fetchUpcomingMovies() {
-            const getMovies = await fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', apiOptions)
-                .catch(err => console.log(err))
-            const moviesJson = await getMovies.json();
-            const upcomingMovies = moviesJson;
-            setUpcomingMovies(upcomingMovies.results);
-        }
-        fetchUpcomingMovies();
-
-        async function fetchShows() {
-            const getShows = await fetch('https://api.themoviedb.org/3/trending/tv/day?language=en-US', apiOptions)
-            .catch(err => console.log(err))
-            const showsJson = await getShows.json();
-            const allShows = showsJson;
-            setShows(allShows.results);
-        }
-        fetchShows();
-
-        async function fetchTheaters() {
-            const getTheaters = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', apiOptions)
-            .catch(err => console.log(err))
-            const theatersJson = await getTheaters.json();
-            const allTheaters = theatersJson;
-            setTheaters(allTheaters.results)
-        }
-        fetchTheaters();
-
+        fetchUpcomingMovies().then((res) => {setUpcomingMovies(res.results)});
+        fetchShows().then((res) => {setShows(res.results)});
+        fetchTheaters().then((res) => {setTheaters(res.results)});
     }, []);
 
 
