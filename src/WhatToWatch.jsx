@@ -5,8 +5,6 @@ import {fetchTopPicks} from './hooks/fetchData';
 function WhatToWatch() {
     const [topPicks, setTopPicks] = useState([]);
 
-    console.log(topPicks);
-
     useEffect(() => {
         fetchTopPicks().then((res) => { setTopPicks(res.results) });
     }, [])
