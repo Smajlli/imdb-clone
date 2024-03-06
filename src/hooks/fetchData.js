@@ -30,4 +30,68 @@ async function fetchTv() {
     return allTv;
 }
 
-export {fetchTopPicks, fetchTrending, fetchTv};
+async function fetchMovies() {
+    const getMovies = await fetch('https://api.themoviedb.org/3/movie/popular?laguange=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const moviesJson = await getMovies.json();
+    const allMovies = moviesJson;
+    return allMovies;
+}
+
+async function fetchActors() {
+    const getActors = await fetch('https://api.themoviedb.org/3/trending/person/day?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const actorsJson = await getActors.json();
+    const allActors = actorsJson;
+    return allActors;
+}
+
+async function fetchShows() {
+    const getShows = await fetch('https://api.themoviedb.org/3/tv/popular?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const showsJson = await getShows.json();
+    const allShows = showsJson;
+    return allShows;
+}
+
+async function fetchTopShows() {
+    const getTopShows = await fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const topShowsJson = await getTopShows.json();
+    const allTopShows = topShowsJson;
+    return allTopShows;
+}
+
+async function fetchUpcomingMovies() {
+    const getUpcomingMovies = await fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const upcomingMoviesJson = await getUpcomingMovies.json();
+    const allUpcomingMovies = upcomingMoviesJson;
+    return allUpcomingMovies;
+}
+
+async function fetchTheaters() {
+    const getTheaters = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const theatersJson = await getTheaters.json();
+    const allTheaters = theatersJson;
+    return allTheaters;
+}
+
+async function fetchPopularMovies() {
+    const getPopularMovies = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', apiOptions)
+        .catch((err) => console.log(err))
+    const popularMoviesJson = await getPopularMovies.json();
+    const allPopularMovies = popularMoviesJson;
+    return allPopularMovies;
+}
+
+async function fetchRevenue(id) {
+    const getRevenue = await fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=c941b11654acfc810e9b2f4d84200b83`)
+        .catch((err) => console.log(err))
+    const revenueJson = await getRevenue.json();
+    const allRevenue = revenueJson;
+    return allRevenue;
+}
+
+export {fetchTopPicks, fetchTrending, fetchTv, fetchMovies, fetchActors, fetchShows, fetchTopShows, fetchUpcomingMovies, fetchTheaters, fetchPopularMovies, fetchRevenue};
